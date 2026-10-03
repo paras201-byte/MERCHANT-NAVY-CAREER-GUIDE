@@ -1,99 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About Us | Merchant Navy Career Guide</title>
+    <title>About Us | Merchant Navy Career Guide</title>
 
-  <meta name="description" content="Learn about Merchant Navy Career Guide, a website created to help students understand Merchant Navy courses, colleges, fees, eligibility, admission and careers.">
+    <meta name="description"
+          content="Learn about Merchant Navy Career Guide and our mission to provide useful information about Merchant Navy courses, colleges, fees, eligibility, admission and careers.">
 
-  <meta name="keywords" content="about Merchant Navy Career Guide, Merchant Navy information, Merchant Navy courses, Merchant Navy career">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        body {
+            background: #f5f8fc;
+            color: #172033;
+            line-height: 1.7;
+        }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7fb;
-      color: #1f2937;
-      line-height: 1.7;
-    }
+        header {
+            background: #082b4c;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-    header {
-      background: #06283d;
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 17px;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-    }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        .hero {
+            background: linear-gradient(135deg, #0b426f, #082b4c);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
 
-    .hero {
-      background: linear-gradient(135deg, #06283d, #1363df);
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+        }
 
-    .hero p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 18px;
-    }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 45px auto;
+        }
 
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 40px auto;
-    }
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
 
-    .section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    }
+        .card h2 {
+            color: #082b4c;
+            margin-bottom: 15px;
+            font-size: 27px;
+        }
 
-    h2 {
-      color: #06283d;
-      margin-bottom: 15px;
-      font-size: 28px;
-    }
+        .card p {
+            margin-bottom: 12px;
+        }
 
-    h3 {
-      color: #1363df;
-      margin: 20
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background: #eef5fb;
+            padding: 22px;
+            border-radius: 10px;
+            border-left: 5px solid #0b426f;
+        }
+
+        .feature h3 {
+            color: #082b4c;
+            margin-bottom: 8px;
+        }
+
+        .note {
+            background: #fff8e6;
+            border-left: 5px solid #d99b00;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #082b4c;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo {
+                width: 100%;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        ⚓ Merchant Navy Career Guide
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="colleges.html">Colleges</a>
+        <a href="fees.html">Fees</a>
+        <a href="eligibility.html">Eligibility</a>
+        <a href="admission.html">Admission</a>
+        <a href="career.html">Career</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>About Merchant Navy Career Guide</h1>
+
+    <p>
+        Your Guide to Courses, Colleges, Fees & Careers in Merchant Navy
+    </p>
+
+</section>
+
+
+<main class="container">
+
+    <section class="card">
+
+        <h2>Who We Are</h2>
+
+        <p>
+            Merchant Navy Career Guide is an informational website created
+            to help students understand career opportunities in the Merchant
+            Navy.
+        </p>
+
+        <p>
+            Choosing a Merchant Navy career can be confusing because students
+            need to understand courses, eligibility requirements, colleges,
+            fees, medical standards and the admission process.
+        </p>
+
+        <p>
+            Our goal is to bring these topics together in one easy-to-understand
+            place so that students can research their options more easily.
+        </p>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>What You Can Find Here</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>⚓ Merchant Navy Courses</h3>
+                <p>
+                    Information about courses such as DNS, B.Sc Nautical
+                    Science, Marine Engineering, ETO and other maritime
+                    career paths.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🎓 Colleges & Institutes</h3>
+                <p>
+                    Learn about maritime institutes and what students should
+                    check before choosing an institute.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>💰 Fees</h3>
+                <p>
+                    Understand the typical fee structure and the costs that
+                    students may need to consider before admission.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>📋 Eligibility</h3>
+                <p>
+                    Understand educational, age, medical and other requirements
+                    that may apply to Merchant Navy courses.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>📝 Admission Process</h3>
+                <p>
+                    Learn the general steps involved in applying for Merchant
+                    Navy courses and completing admission formalities.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🚢 Career & Salary</h3>
+                <p>
+                    Explore different career paths, ranks and the factors that
+                    can affect career progression and earnings.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>Our Mission</h2>
+
+        <p>
+            Our mission is to make Merchant Navy career information easier
+            for students to understand.
+        </p>
+
+        <p>
+            We aim to explain complicated information in simple language and
+            encourage students to verify important admission, fee, medical
+            and eligibility details with the relevant official authorities
+            and institutes.
+        </p>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>Important Information</h2>
+
+        <div class="note">
+
+            <p>
+                <strong>Please verify important information before making
+                any admission or financial decision.</strong>
+            </p>
+
+            <p>
+                Course eligibility, fees, admission dates, medical standards,
+                sponsorship requirements and institute rules can change.
+                Students should check the latest information from official
+                sources such as the Indian Maritime University (IMU),
+                Directorate General of Shipping (DGS), and the concerned
+                institute.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>Why This Website?</h2>
+
+        <p>
+            Many students search online for Merchant Navy information but
+            find scattered or outdated information.
+        </p>
+
+        <p>
+            Merchant Navy Career Guide aims to organize the major topics in
+            a simple format so students can use the website as a starting
+            point for their research.
+        </p>
+
+        <p>
+            We are continuously working to improve the website and add more
+            useful information for aspiring Merchant Navy students.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p><strong>⚓ Merchant Navy Career Guide</strong></p>
+
+    <p>
+        Your Guide to Courses, Colleges, Fees & Careers in Merchant Navy
+    </p>
+
+    <p>
+        © 2026 Merchant Navy Career Guide. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
