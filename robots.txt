@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paras201-byte.github.io/MERCHANT-NAVY-CAREER-GUIDE/sitemap.xml
